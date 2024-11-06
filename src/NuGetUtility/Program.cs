@@ -13,6 +13,7 @@ using NuGetUtility.Extensions;
 using NuGetUtility.LicenseValidator;
 using NuGetUtility.Output;
 using NuGetUtility.Output.Json;
+using NuGetUtility.Output.Markdown;
 using NuGetUtility.Output.Table;
 using NuGetUtility.PackageInformationReader;
 using NuGetUtility.ReferencedPackagesReader;
@@ -183,6 +184,7 @@ namespace NuGetUtility
                 OutputType.Json => new JsonOutputFormatter(false, ReturnErrorsOnly, !IncludeIgnoredPackages),
                 OutputType.JsonPretty => new JsonOutputFormatter(true, ReturnErrorsOnly, !IncludeIgnoredPackages),
                 OutputType.Table => new TableOutputFormatter(ReturnErrorsOnly, !IncludeIgnoredPackages),
+                OutputType.Markdown => new MarkdownOutputFormatter(ReturnErrorsOnly, !IncludeIgnoredPackages),
                 _ => throw new ArgumentOutOfRangeException($"{OutputType} not supported")
             };
         }
