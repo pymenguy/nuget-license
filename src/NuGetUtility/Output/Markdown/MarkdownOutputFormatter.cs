@@ -9,11 +9,13 @@ namespace NuGetUtility.Output.Markdown
     {
         private readonly bool _printErrorsOnly;
         private readonly bool _skipIgnoredPackages;
+        private readonly string[]? _ignoredColumns;
 
-        public MarkdownOutputFormatter(bool printErrorsOnly, bool skipIgnoredPackages)
+        public MarkdownOutputFormatter(bool printErrorsOnly, bool skipIgnoredPackages, IEnumerable<string>? ignoredColumns = null)
         {
             _printErrorsOnly = printErrorsOnly;
             _skipIgnoredPackages = skipIgnoredPackages;
+            _ignoredColumns = ignoredColumns?.ToArray();
         }
 
         public async Task Write(Stream stream, IList<LicenseValidationResult> results)
@@ -38,6 +40,14 @@ namespace NuGetUtility.Output.Markdown
                 foreach (ColumnDefinition? definition in columnDefinitions)
                 {
                     definition.Enabled |= definition.IsRelevant(license);
+                }
+            }
+
+            if (_ignoredColumns is not null)
+            {
+                foreach (ColumnDefinition? definition in columnDefinitions)
+                {
+                    definition.Enabled &= !_ignoredColumns.Contains(definition.Title);
                 }
             }
 

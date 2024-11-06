@@ -189,7 +189,7 @@ namespace NuGetUtility
                 OutputType.Json => new JsonOutputFormatter(false, ReturnErrorsOnly, !IncludeIgnoredPackages),
                 OutputType.JsonPretty => new JsonOutputFormatter(true, ReturnErrorsOnly, !IncludeIgnoredPackages),
                 OutputType.Table => new TableOutputFormatter(ReturnErrorsOnly, !IncludeIgnoredPackages),
-                OutputType.Markdown => new MarkdownOutputFormatter(ReturnErrorsOnly, !IncludeIgnoredPackages),
+                OutputType.Markdown => new MarkdownOutputFormatter(ReturnErrorsOnly, !IncludeIgnoredPackages, GetIgnoredColumns()),
                 _ => throw new ArgumentOutOfRangeException($"{OutputType} not supported")
             };
         }
