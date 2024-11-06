@@ -99,6 +99,11 @@ namespace NuGetUtility
             Description = "This option allows to select a Target framework moniker (https://learn.microsoft.com/en-us/dotnet/standard/frameworks) for which to analyze dependencies.")]
         public string? TargetFramework { get; } = null;
 
+        [Option(LongName = "ignored-columns-from-output",
+            ShortName = "ignored-columns",
+            Description = "This option allows to specify column name(s) to exclude from the output")]
+        public string? IgnoredColumns { get; } = null;
+
         private static string GetVersion()
             => typeof(Program).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? string.Empty;
 
@@ -287,6 +292,21 @@ namespace NuGetUtility
             }
 
             throw new FileNotFoundException("Please provide an input file");
+        }
+
+        private string[] GetIgnoredColumns()
+        {
+            if (IgnoredColumns == null)
+            {
+                return Array.Empty<string>();
+            }
+
+            if (File.Exists(IgnoredColumns))
+            {
+                return JsonSerializer.Deserialize<string[]>(File.ReadAllText(IgnoredColumns))!;
+            }
+
+            return new[] { IgnoredColumns };
         }
     }
 }
