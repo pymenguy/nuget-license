@@ -1,6 +1,7 @@
 // Licensed to the projects contributors.
 // The license conditions are provided in the LICENSE file located in the project root
 
+using System.IO;
 using NuGetUtility.LicenseValidator;
 
 namespace NuGetUtility.Output.Table
@@ -9,11 +10,13 @@ namespace NuGetUtility.Output.Table
     {
         private readonly bool _printErrorsOnly;
         private readonly bool _skipIgnoredPackages;
+        private readonly string[]? _ignoredColumns;
 
-        public TableOutputFormatter(bool printErrorsOnly, bool skipIgnoredPackages)
+        public TableOutputFormatter(bool printErrorsOnly, bool skipIgnoredPackages, IEnumerable<string>? ignoredColumns = null)
         {
             _printErrorsOnly = printErrorsOnly;
             _skipIgnoredPackages = skipIgnoredPackages;
+            _ignoredColumns = ignoredColumns?.ToArray();
         }
 
         public async Task Write(Stream stream, IList<LicenseValidationResult> results)
@@ -41,6 +44,15 @@ namespace NuGetUtility.Output.Table
                 }
             }
 
+            if (_ignoredColumns is not null)
+            {
+                foreach (ColumnDefinition? definition in columnDefinitions)
+                {
+                    definition.Enabled &= !_ignoredColumns.Contains(definition.Title);
+                }
+            }
+
+
             if (_printErrorsOnly)
             {
                 results = results.Where(r => r.ValidationErrors.Any()).ToList();
@@ -51,7 +63,12 @@ namespace NuGetUtility.Output.Table
             }
 
             ColumnDefinition[] relevantColumns = columnDefinitions.Where(c => c.Enabled).ToArray();
-            await TablePrinterExtensions
+            await Print(stream, results, relevantColumns);
+        }
+
+        protected virtual Task Print(Stream stream, IList<LicenseValidationResult> results, ColumnDefinition[] relevantColumns)
+        {
+            return TablePrinterExtensions
                 .Create(stream, relevantColumns.Select(d => d.Title))
                 .FromValues(
                     results,
@@ -59,7 +76,7 @@ namespace NuGetUtility.Output.Table
                 .Print();
         }
 
-        private sealed record ColumnDefinition(string Title, Func<LicenseValidationResult, object?> PropertyAccessor, Func<LicenseValidationResult, bool> IsRelevant, bool Enabled = false)
+        protected sealed record ColumnDefinition(string Title, Func<LicenseValidationResult, object?> PropertyAccessor, Func<LicenseValidationResult, bool> IsRelevant, bool Enabled = false)
         {
             public bool Enabled { get; set; } = Enabled;
         }

@@ -10,36 +10,38 @@ namespace NuGetUtility.Output.Table
     /// </summary>
     public class TablePrinter
     {
-        private readonly int[] _lengths;
-        private readonly List<string[][]> _rows = new List<string[][]>();
+        protected int[] Lengths { get; }
+        protected List<string[][]> Rows { get; } = new List<string[][]>();
+        protected string[] Titles { get; }
+
         private readonly Stream _stream;
-        private readonly string[] _titles;
+
 
         public TablePrinter(Stream stream, IEnumerable<string> titles)
         {
             _stream = stream;
-            _titles = titles.ToArray();
-            _lengths = _titles.Select(t => t.Length).ToArray();
+            Titles = titles.ToArray();
+            Lengths = titles.Select(t => t.Length).ToArray();
         }
 
         public void AddRow(object?[] row)
         {
-            if (row.Length != _titles.Length)
+            if (row.Length != Titles.Length)
             {
                 throw new Exception(
-                    $"Added row length [{row.Length}] is not equal to title row length [{_titles.Length}]");
+                    $"Added row length [{row.Length}] is not equal to title row length [{Titles.Length}]");
             }
 
             string[][] rowElements = row.Select(GetLines).ToArray();
-            for (int i = 0; i < _titles.Length; i++)
+            for (int i = 0; i < Titles.Length; i++)
             {
                 int maxLineLength = rowElements[i].Any() ? rowElements[i].Max(line => line.Length) : 0;
-                if (maxLineLength > _lengths[i])
+                if (maxLineLength > Lengths[i])
                 {
-                    _lengths[i] = maxLineLength;
+                    Lengths[i] = maxLineLength;
                 }
             }
-            _rows.Add(rowElements);
+            Rows.Add(rowElements);
         }
 
         private string[] GetLines(object? lines)
@@ -55,19 +57,32 @@ namespace NuGetUtility.Output.Table
         {
             using var writer = new StreamWriter(_stream, encoding: new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true), bufferSize: 1024, leaveOpen: true);
 
-            await WriteSeparator(writer);
-            await WriteRow(_titles, writer);
-            await WriteSeparator(writer);
+            await WriteHeaders(writer);
+            await WriteBody(writer);
+            await WriteFooter(writer);
+        }
 
-            foreach (string[][] row in _rows)
-            {
-                await WriteRow(row, writer);
-            }
-
+        protected virtual async Task WriteHeaders(TextWriter writer)
+        {
+            await WriteSeparator(writer);
+            await WriteRow(Titles, writer);
             await WriteSeparator(writer);
         }
 
-        private async Task WriteRow(string[][] values, TextWriter writer)
+        protected virtual async Task WriteBody(TextWriter writer)
+        {
+            foreach (string[][] row in Rows)
+            {
+                await WriteRow(row, writer);
+            }
+        }
+
+        protected virtual async Task WriteFooter(TextWriter writer)
+        {
+            await WriteSeparator(writer);
+        }
+
+        protected virtual async Task WriteRow(string[][] values, TextWriter writer)
         {
             int maximumLines = values.Max(lines => lines.Length);
             for (int line = 0; line < maximumLines; line++)
@@ -76,20 +91,20 @@ namespace NuGetUtility.Output.Table
             }
         }
 
-        private async Task WriteRow(string[] values, TextWriter writer)
+        protected virtual async Task WriteRow(string[] values, TextWriter writer)
         {
             for (int i = 0; i < values.Length; i++)
             {
                 await writer.WriteAsync("| ");
-                await writer.WriteAsync(values[i].PadRight(_lengths[i]));
+                await writer.WriteAsync(values[i].PadRight(Lengths[i]));
                 await writer.WriteAsync(' ');
             }
             await writer.WriteLineAsync("|");
         }
 
-        private async Task WriteSeparator(TextWriter writer)
+        protected virtual async Task WriteSeparator(TextWriter writer)
         {
-            foreach (int l in _lengths)
+            foreach (int l in Lengths)
             {
                 await writer.WriteAsync("+-" + new string('-', l) + '-');
             }
