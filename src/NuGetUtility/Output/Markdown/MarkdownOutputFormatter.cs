@@ -9,11 +9,8 @@ namespace NuGetUtility.Output.Markdown
 {
     public class MarkdownOutputFormatter : TableOutputFormatter
     {
-        private readonly string[]? _ignoredColumns;
-
-        public MarkdownOutputFormatter(bool printErrorsOnly, bool skipIgnoredPackages, IEnumerable<string>? ignoredColumns = null) : base(printErrorsOnly, skipIgnoredPackages)
+        public MarkdownOutputFormatter(bool printErrorsOnly, bool skipIgnoredPackages, IEnumerable<string>? ignoredColumns = null) : base(printErrorsOnly, skipIgnoredPackages, ignoredColumns)
         {
-            _ignoredColumns = ignoredColumns?.ToArray();
         }
         
         protected override async Task Print(Stream stream, IList<LicenseValidationResult> results, ColumnDefinition[] relevantColumns)
