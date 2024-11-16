@@ -1,0 +1,130 @@
+﻿[
+  {
+    "PackageId": "National Security Orchestrator",
+    "PackageVersion": "3.5.6",
+    "Copyright": "You can\u0027t parse the bandwidth without quantifying the wireless THX bandwidth!",
+    "Authors": "Roderick Koelpin,Roderick Koelpin,Roderick Koelpin",
+    "License": "Try to copy the HDD array, maybe it will copy the back-end array!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Legacy Metrics Planner",
+    "PackageVersion": "9.5.0",
+    "Copyright": "The USB transmitter is down, generate the bluetooth transmitter so we can generate the USB transmitter!",
+    "Authors": "Rochelle Ondricka,Rochelle Ondricka,Rochelle Ondricka,Rochelle Ondricka,Rochelle Ondricka",
+    "License": "Use the open-source JBOD matrix, then you can synthesize the open-source matrix!",
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Dynamic Configuration Assistant",
+    "PackageVersion": "3.2.1",
+    "Copyright": "I\u0027ll synthesize the bluetooth FTP system, that should system the FTP system!",
+    "Authors": "Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Global Markets Administrator",
+    "PackageVersion": "8.6.8",
+    "Copyright": "The SSL application is down, reboot the bluetooth application so we can reboot the SSL application!",
+    "Authors": "Julius Bernhard,Julius Bernhard,Julius Bernhard,Julius Bernhard",
+    "License": "You can\u0027t transmit the application without connecting the open-source SDD application!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Future Accounts Designer",
+    "PackageVersion": "5.1.9",
+    "License": "We need to navigate the wireless SAS pixel!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Regional Factors Designer",
+    "PackageVersion": "7.4.1",
+    "Copyright": "Use the haptic RSS port, then you can transmit the haptic port!",
+    "Authors": "Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus",
+    "License": "generating the firewall won\u0027t do anything, we need to program the online JSON firewall!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Corporate Optimization Agent",
+    "PackageVersion": "2.7.0",
+    "LicenseInformationOrigin": 3
+  },
+  {
+    "PackageId": "District Creative Designer",
+    "PackageVersion": "1.4.6",
+    "License": "We need to program the haptic IB panel!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Customer Metrics Analyst",
+    "PackageVersion": "6.7.1",
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Central Tactics Director",
+    "PackageVersion": "4.6.7",
+    "Authors": "Doyle Osinski,Doyle Osinski,Doyle Osinski,Doyle Osinski",
+    "License": "backing up the system won\u0027t do anything, we need to parse the neural CSS system!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Internal Factors Facilitator",
+    "PackageVersion": "2.6.3",
+    "Authors": "Mable Kris,Mable Kris,Mable Kris,Mable Kris,Mable Kris",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Global Usability Manager",
+    "PackageVersion": "9.1.0",
+    "LicenseInformationOrigin": 4
+  },
+  {
+    "PackageId": "Investor Interactions Designer",
+    "PackageVersion": "1.9.4",
+    "Copyright": "parsing the card won\u0027t do anything, we need to synthesize the online SQL card!",
+    "Authors": "Stella Barton,Stella Barton",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Corporate Intranet Associate",
+    "PackageVersion": "7.5.1",
+    "Copyright": "The FTP sensor is down, transmit the cross-platform sensor so we can transmit the FTP sensor!",
+    "LicenseInformationOrigin": 4
+  },
+  {
+    "PackageId": "Global Configuration Consultant",
+    "PackageVersion": "5.9.5",
+    "Authors": "Guadalupe Littel,Guadalupe Littel,Guadalupe Littel",
+    "License": "The HDD alarm is down, transmit the auxiliary alarm so we can transmit the HDD alarm!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Lead Configuration Liaison",
+    "PackageVersion": "1.8.9",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Dynamic Factors Producer",
+    "PackageVersion": "5.7.1",
+    "Copyright": "Use the cross-platform CSS capacitor, then you can override the cross-platform capacitor!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Human Accountability Developer",
+    "PackageVersion": "6.9.0",
+    "License": "If we program the circuit, we can get to the SAS circuit through the back-end SAS circuit!",
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Customer Interactions Representative",
+    "PackageVersion": "0.8.8",
+    "License": "We need to quantify the digital SSL array!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Chief Functionality Planner",
+    "PackageVersion": "5.1.2",
+    "Authors": "Matt Mills,Matt Mills",
+    "LicenseInformationOrigin": 2
+  }
+]

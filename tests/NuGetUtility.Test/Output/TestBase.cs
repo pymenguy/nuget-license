@@ -17,14 +17,17 @@ namespace NuGetUtility.Test.Output
             _includeCopyright = includeCopyright;
             _includeAuthors = includeAuthors;
             _includeLicenseUrl = includeLicenseUrl;
+
+            OmittedOutputFieldsFaker = new Faker<IEnumerable<LicenseValidationResultProperties>>().CustomInstantiator(f => GetOmittedFields(f)).UseSeed(1234567);
         }
 
-        private IOutputFormatter _uut = null!;
+        protected Faker<IEnumerable<LicenseValidationResultProperties>> OmittedOutputFieldsFaker;
         protected Faker<LicenseValidationResult> LicenseValidationErrorFaker = null!;
         protected Faker<LicenseValidationResult> ValidatedLicenseFaker = null!;
         private readonly bool _includeCopyright;
         private readonly bool _includeAuthors;
         private readonly bool _includeLicenseUrl;
+        private readonly VerifySettings _verifySettings = new VerifySettings();
 
         [SetUp]
         public void SetUp()
@@ -50,11 +53,11 @@ namespace NuGetUtility.Test.Output
                         f.Random.Enum<LicenseInformationOrigin>(),
                         GetErrorList(f).ToList()))
                 .UseSeed(9078345);
-            _uut = CreateUut();
+            _verifySettings.UseDirectory("VerifyResults");
         }
-        protected abstract IOutputFormatter CreateUut();
+        protected abstract IOutputFormatter CreateUut(IEnumerable<LicenseValidationResultProperties> ignoredFields);
 
-        private T? GetNullable<T>(Faker faker, Func<T> getter) where T : class
+        private static T? GetNullable<T>(Faker faker, Func<T> getter) where T : class
         {
             if (faker.Random.Bool())
             {
@@ -63,7 +66,7 @@ namespace NuGetUtility.Test.Output
             return getter();
         }
 
-        private IEnumerable<ValidationError> GetErrorList(Faker faker)
+        private static IEnumerable<ValidationError> GetErrorList(Faker faker)
         {
             int itemCount = faker.Random.Int(3, 10);
             for (int i = 0; i < itemCount; i++)
@@ -72,31 +75,61 @@ namespace NuGetUtility.Test.Output
             }
         }
 
+        private static IEnumerable<LicenseValidationResultProperties> GetOmittedFields(Faker faker)
+        {
+            foreach (LicenseValidationResultProperties type in Enum.GetValues(typeof(LicenseValidationResultProperties)))
+            {
+                if (faker.Random.Bool())
+                {
+                    yield return type;
+                }
+            }
+        }
+
         [Test]
-        public async Task ValidatedLicensesWithErrors_Should_PrintCorrectTable(
+        public async Task ValidatedLicensesWithErrors_Should_PrintCorrectOutput(
             [Values(0, 1, 5, 20, 100)] int validCount,
             [Values(1, 3, 5, 20)] int errorCount)
         {
+            IOutputFormatter uut = CreateUut(OmittedOutputFieldsFaker.Generate());
             using var stream = new MemoryStream();
             var result = LicenseValidationErrorFaker.GenerateForever()
                 .Take(errorCount)
                 .Concat(ValidatedLicenseFaker.GenerateForever().Take(validCount))
                 .Shuffle(971234)
                 .ToList();
-            await _uut.Write(stream, result);
+            await uut.Write(stream, result);
 
-            await Verify(stream.AsString()).HashParameters();
+            await Verify(stream.AsString(), _verifySettings).HashParameters();
         }
 
         [Test]
-        public async Task ValidatedLicenses_Should_PrintCorrectTable(
+        public async Task ValidatedLicenses_Should_PrintCorrectOutput(
             [Values(0, 1, 5, 20, 100)] int validatedLicenseCount)
         {
+            IOutputFormatter uut = CreateUut(Enumerable.Empty<LicenseValidationResultProperties>());
             using var stream = new MemoryStream();
             var validated = ValidatedLicenseFaker.GenerateForever().Take(validatedLicenseCount).ToList();
-            await _uut.Write(stream, validated);
+            await uut.Write(stream, validated);
 
-            await Verify(stream.AsString()).HashParameters();
+            await Verify(stream.AsString(), _verifySettings).HashParameters();
+        }
+
+        [Test]
+        public async Task ValidatedLicensesWithOmittedValues_Should_PrintCorrectOutput(
+            [Values(0, 1, 5, 20, 100)] int validCount,
+            [Values(0, 1, 3, 5, 20)] int errorCount)
+        {
+            IOutputFormatter uut = CreateUut(OmittedOutputFieldsFaker.Generate());
+            using var stream = new MemoryStream();
+            var result = LicenseValidationErrorFaker.GenerateForever()
+                .Take(errorCount)
+                .Concat(ValidatedLicenseFaker.GenerateForever().Take(validCount))
+                .Shuffle(971234)
+                .ToList();
+            await uut.Write(stream, result);
+
+            await Verify(stream.AsString(), _verifySettings).HashParameters();
         }
 
         private class NuGetVersion : INuGetVersion

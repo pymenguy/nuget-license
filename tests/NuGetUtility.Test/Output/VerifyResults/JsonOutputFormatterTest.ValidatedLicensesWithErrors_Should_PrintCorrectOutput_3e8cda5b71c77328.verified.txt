@@ -1,0 +1,133 @@
+﻿[
+  {
+    "PackageId": "National Security Orchestrator",
+    "PackageVersion": "3.5.6",
+    "Copyright": "You can\u0027t parse the bandwidth without quantifying the wireless THX bandwidth!",
+    "License": "Try to copy the HDD array, maybe it will copy the back-end array!"
+  },
+  {
+    "PackageId": "Principal Functionality Agent",
+    "PackageVersion": "1.5.3",
+    "ValidationErrors": [
+      {
+        "Error": "Alyson",
+        "Context": "https://carmelo.biz"
+      },
+      {
+        "Error": "Michele",
+        "Context": "https://miles.net"
+      },
+      {
+        "Error": "Freddie",
+        "Context": "http://kade.net"
+      },
+      {
+        "Error": "Jaunita",
+        "Context": "http://marcelina.biz"
+      }
+    ],
+    "License": "connecting the firewall won\u0027t do anything, we need to copy the digital XSS firewall!"
+  },
+  {
+    "PackageId": "Global Markets Administrator",
+    "PackageVersion": "8.6.8",
+    "PackageProjectUrl": "https://lois.biz",
+    "Copyright": "The SSL application is down, reboot the bluetooth application so we can reboot the SSL application!",
+    "License": "You can\u0027t transmit the application without connecting the open-source SDD application!"
+  },
+  {
+    "PackageId": "Future Accounts Designer",
+    "PackageVersion": "5.1.9",
+    "License": "We need to navigate the wireless SAS pixel!"
+  },
+  {
+    "PackageId": "Human Accountability Developer",
+    "PackageVersion": "6.9.0",
+    "License": "If we program the circuit, we can get to the SAS circuit through the back-end SAS circuit!"
+  },
+  {
+    "PackageId": "Regional Factors Designer",
+    "PackageVersion": "7.4.1",
+    "Copyright": "Use the haptic RSS port, then you can transmit the haptic port!",
+    "License": "generating the firewall won\u0027t do anything, we need to program the online JSON firewall!"
+  },
+  {
+    "PackageId": "District Creative Designer",
+    "PackageVersion": "1.4.6",
+    "PackageProjectUrl": "http://cameron.info",
+    "License": "We need to program the haptic IB panel!"
+  },
+  {
+    "PackageId": "Corporate Intranet Associate",
+    "PackageVersion": "7.5.1",
+    "Copyright": "The FTP sensor is down, transmit the cross-platform sensor so we can transmit the FTP sensor!"
+  },
+  {
+    "PackageId": "Corporate Optimization Agent",
+    "PackageVersion": "2.7.0",
+    "PackageProjectUrl": "http://bryce.com"
+  },
+  {
+    "PackageId": "Customer Metrics Analyst",
+    "PackageVersion": "6.7.1"
+  },
+  {
+    "PackageId": "Global Usability Manager",
+    "PackageVersion": "9.1.0",
+    "PackageProjectUrl": "http://vella.com"
+  },
+  {
+    "PackageId": "Central Tactics Director",
+    "PackageVersion": "4.6.7",
+    "PackageProjectUrl": "https://valentina.net",
+    "License": "backing up the system won\u0027t do anything, we need to parse the neural CSS system!"
+  },
+  {
+    "PackageId": "Investor Interactions Designer",
+    "PackageVersion": "1.9.4",
+    "PackageProjectUrl": "https://octavia.name",
+    "Copyright": "parsing the card won\u0027t do anything, we need to synthesize the online SQL card!"
+  },
+  {
+    "PackageId": "Chief Functionality Planner",
+    "PackageVersion": "5.1.2",
+    "PackageProjectUrl": "http://myrtice.com"
+  },
+  {
+    "PackageId": "Global Configuration Consultant",
+    "PackageVersion": "5.9.5",
+    "License": "The HDD alarm is down, transmit the auxiliary alarm so we can transmit the HDD alarm!"
+  },
+  {
+    "PackageId": "Legacy Metrics Planner",
+    "PackageVersion": "9.5.0",
+    "Copyright": "The USB transmitter is down, generate the bluetooth transmitter so we can generate the USB transmitter!",
+    "License": "Use the open-source JBOD matrix, then you can synthesize the open-source matrix!"
+  },
+  {
+    "PackageId": "Dynamic Configuration Assistant",
+    "PackageVersion": "3.2.1",
+    "Copyright": "I\u0027ll synthesize the bluetooth FTP system, that should system the FTP system!"
+  },
+  {
+    "PackageId": "Dynamic Factors Producer",
+    "PackageVersion": "5.7.1",
+    "Copyright": "Use the cross-platform CSS capacitor, then you can override the cross-platform capacitor!"
+  },
+  {
+    "PackageId": "Internal Factors Facilitator",
+    "PackageVersion": "2.6.3",
+    "PackageProjectUrl": "http://melba.name"
+  },
+  {
+    "PackageId": "Customer Interactions Representative",
+    "PackageVersion": "0.8.8",
+    "PackageProjectUrl": "http://heather.name",
+    "License": "We need to quantify the digital SSL array!"
+  },
+  {
+    "PackageId": "Lead Configuration Liaison",
+    "PackageVersion": "1.8.9",
+    "PackageProjectUrl": "http://esther.biz"
+  }
+]

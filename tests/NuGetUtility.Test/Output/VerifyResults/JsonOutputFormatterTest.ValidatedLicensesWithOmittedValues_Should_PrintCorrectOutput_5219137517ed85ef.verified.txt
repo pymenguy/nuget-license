@@ -1,0 +1,29 @@
+﻿[
+  {
+    "PackageId": "District Creative Designer",
+    "PackageVersion": "1.4.6",
+    "PackageProjectUrl": "http://cameron.info",
+    "License": "We need to program the haptic IB panel!"
+  },
+  {
+    "PackageId": "Legacy Metrics Planner",
+    "PackageVersion": "9.5.0",
+    "Copyright": "The USB transmitter is down, generate the bluetooth transmitter so we can generate the USB transmitter!",
+    "License": "Use the open-source JBOD matrix, then you can synthesize the open-source matrix!"
+  },
+  {
+    "PackageId": "Lead Configuration Liaison",
+    "PackageVersion": "1.8.9",
+    "PackageProjectUrl": "http://esther.biz"
+  },
+  {
+    "PackageId": "Chief Functionality Planner",
+    "PackageVersion": "5.1.2",
+    "PackageProjectUrl": "http://myrtice.com"
+  },
+  {
+    "PackageId": "Corporate Intranet Associate",
+    "PackageVersion": "7.5.1",
+    "Copyright": "The FTP sensor is down, transmit the cross-platform sensor so we can transmit the FTP sensor!"
+  }
+]

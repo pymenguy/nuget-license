@@ -1,0 +1,219 @@
+﻿[
+  {
+    "PackageId": "Customer Metrics Analyst",
+    "PackageVersion": "6.7.1",
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "National Security Orchestrator",
+    "PackageVersion": "3.5.6",
+    "Authors": "Roderick Koelpin,Roderick Koelpin,Roderick Koelpin",
+    "License": "Try to copy the HDD array, maybe it will copy the back-end array!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Global Markets Administrator",
+    "PackageVersion": "8.6.8",
+    "PackageProjectUrl": "https://lois.biz",
+    "Authors": "Julius Bernhard,Julius Bernhard,Julius Bernhard,Julius Bernhard",
+    "License": "You can\u0027t transmit the application without connecting the open-source SDD application!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Human Accountability Developer",
+    "PackageVersion": "6.9.0",
+    "License": "If we program the circuit, we can get to the SAS circuit through the back-end SAS circuit!",
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Internal Factors Facilitator",
+    "PackageVersion": "2.6.3",
+    "PackageProjectUrl": "http://melba.name",
+    "Authors": "Mable Kris,Mable Kris,Mable Kris,Mable Kris,Mable Kris",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Global Configuration Consultant",
+    "PackageVersion": "5.9.5",
+    "Authors": "Guadalupe Littel,Guadalupe Littel,Guadalupe Littel",
+    "License": "The HDD alarm is down, transmit the auxiliary alarm so we can transmit the HDD alarm!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Chief Functionality Planner",
+    "PackageVersion": "5.1.2",
+    "PackageProjectUrl": "http://myrtice.com",
+    "Authors": "Matt Mills,Matt Mills",
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Lead Configuration Liaison",
+    "PackageVersion": "1.8.9",
+    "PackageProjectUrl": "http://esther.biz",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Regional Factors Designer",
+    "PackageVersion": "7.4.1",
+    "Authors": "Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus,Misty Nikolaus",
+    "License": "generating the firewall won\u0027t do anything, we need to program the online JSON firewall!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Principal Functionality Agent",
+    "PackageVersion": "1.5.3",
+    "Authors": "Elena Jacobson,Elena Jacobson,Elena Jacobson,Elena Jacobson,Elena Jacobson,Elena Jacobson,Elena Jacobson,Elena Jacobson",
+    "ValidationErrors": [
+      {
+        "Error": "Alyson",
+        "Context": "https://carmelo.biz"
+      },
+      {
+        "Error": "Michele",
+        "Context": "https://miles.net"
+      },
+      {
+        "Error": "Freddie",
+        "Context": "http://kade.net"
+      },
+      {
+        "Error": "Jaunita",
+        "Context": "http://marcelina.biz"
+      }
+    ],
+    "License": "connecting the firewall won\u0027t do anything, we need to copy the digital XSS firewall!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Dynamic Factors Producer",
+    "PackageVersion": "5.7.1",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Customer Interactions Representative",
+    "PackageVersion": "0.8.8",
+    "PackageProjectUrl": "http://heather.name",
+    "License": "We need to quantify the digital SSL array!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Dynamic Configuration Assistant",
+    "PackageVersion": "3.2.1",
+    "Authors": "Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman,Bert Stroman",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "District Creative Designer",
+    "PackageVersion": "1.4.6",
+    "PackageProjectUrl": "http://cameron.info",
+    "License": "We need to program the haptic IB panel!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Investor Interactions Designer",
+    "PackageVersion": "1.9.4",
+    "PackageProjectUrl": "https://octavia.name",
+    "Authors": "Stella Barton,Stella Barton",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Future Data Manager",
+    "PackageVersion": "2.5.9",
+    "ValidationErrors": [
+      {
+        "Error": "Abner",
+        "Context": "http://tavares.info"
+      },
+      {
+        "Error": "Johann",
+        "Context": "http://andres.net"
+      },
+      {
+        "Error": "Jaquan",
+        "Context": "http://carey.org"
+      },
+      {
+        "Error": "Arvel",
+        "Context": "http://mortimer.org"
+      },
+      {
+        "Error": "Alicia",
+        "Context": "http://paula.com"
+      },
+      {
+        "Error": "Heidi",
+        "Context": "http://letha.name"
+      },
+      {
+        "Error": "Reid",
+        "Context": "https://amely.info"
+      },
+      {
+        "Error": "Nikki",
+        "Context": "https://mckayla.info"
+      },
+      {
+        "Error": "Kiara",
+        "Context": "https://floyd.net"
+      }
+    ],
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Future Accounts Designer",
+    "PackageVersion": "5.1.9",
+    "License": "We need to navigate the wireless SAS pixel!",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Corporate Intranet Associate",
+    "PackageVersion": "7.5.1",
+    "LicenseInformationOrigin": 4
+  },
+  {
+    "PackageId": "Global Usability Manager",
+    "PackageVersion": "9.1.0",
+    "PackageProjectUrl": "http://vella.com",
+    "LicenseInformationOrigin": 4
+  },
+  {
+    "PackageId": "Investor Tactics Strategist",
+    "PackageVersion": "1.6.5",
+    "PackageProjectUrl": "http://arch.biz",
+    "Authors": "Rene Sporer,Rene Sporer,Rene Sporer,Rene Sporer,Rene Sporer,Rene Sporer,Rene Sporer",
+    "ValidationErrors": [
+      {
+        "Error": "Rosendo",
+        "Context": "https://pierce.name"
+      },
+      {
+        "Error": "Braeden",
+        "Context": "http://ayana.org"
+      },
+      {
+        "Error": "Avery",
+        "Context": "http://jarret.biz"
+      },
+      {
+        "Error": "Clarissa",
+        "Context": "https://audreanne.name"
+      }
+    ],
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Central Tactics Director",
+    "PackageVersion": "4.6.7",
+    "PackageProjectUrl": "https://valentina.net",
+    "Authors": "Doyle Osinski,Doyle Osinski,Doyle Osinski,Doyle Osinski",
+    "License": "backing up the system won\u0027t do anything, we need to parse the neural CSS system!",
+    "LicenseInformationOrigin": 1
+  },
+  {
+    "PackageId": "Legacy Metrics Planner",
+    "PackageVersion": "9.5.0",
+    "Authors": "Rochelle Ondricka,Rochelle Ondricka,Rochelle Ondricka,Rochelle Ondricka,Rochelle Ondricka",
+    "License": "Use the open-source JBOD matrix, then you can synthesize the open-source matrix!",
+    "LicenseInformationOrigin": 2
+  }
+]

@@ -48,9 +48,9 @@ namespace NuGetUtility.Test.Output.Table
             _omitValidLicensesOnError = omitValidLicensesOnError;
             _skipIgnoredPackages = skipIgnoredPackages;
         }
-        protected override IOutputFormatter CreateUut()
+        protected override IOutputFormatter CreateUut(IEnumerable<NuGetUtility.LicenseValidator.LicenseValidationResultProperties> ignoredFields)
         {
-            return new TableOutputFormatter(_omitValidLicensesOnError, _skipIgnoredPackages);
+            return new TableOutputFormatter(_omitValidLicensesOnError, _skipIgnoredPackages, ignoredFields);
         }
     }
 }

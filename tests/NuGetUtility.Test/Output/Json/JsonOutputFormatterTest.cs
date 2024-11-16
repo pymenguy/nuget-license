@@ -82,9 +82,9 @@ namespace NuGetUtility.Test.Output.Json
             _omitValidLicensesOnError = omitValidLicensesOnError;
             _skipIgnoredPackages = skipIgnoredPackages;
         }
-        protected override IOutputFormatter CreateUut()
+        protected override IOutputFormatter CreateUut(IEnumerable<NuGetUtility.LicenseValidator.LicenseValidationResultProperties> ignoredFields)
         {
-            return new JsonOutputFormatter(_prettyPrint, _omitValidLicensesOnError, _skipIgnoredPackages);
+            return new JsonOutputFormatter(_prettyPrint, _omitValidLicensesOnError, _skipIgnoredPackages, ignoredFields);
         }
     }
 }

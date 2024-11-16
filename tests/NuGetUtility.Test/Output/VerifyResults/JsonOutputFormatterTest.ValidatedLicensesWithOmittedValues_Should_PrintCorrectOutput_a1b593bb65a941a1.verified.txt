@@ -1,0 +1,21 @@
+﻿[
+  {
+    "PackageId": "Legacy Metrics Planner",
+    "PackageVersion": "9.5.0",
+    "License": "Use the open-source JBOD matrix, then you can synthesize the open-source matrix!"
+  },
+  {
+    "PackageId": "Forward Quality Producer",
+    "PackageVersion": "6.3.7",
+    "PackageProjectUrl": "https://jayne.name",
+    "License": "The CSS microchip is down, back up the bluetooth microchip so we can back up the CSS microchip!"
+  },
+  {
+    "PackageId": "Regional Security Architect",
+    "PackageVersion": "2.2.5"
+  },
+  {
+    "PackageId": "Global Usability Representative",
+    "PackageVersion": "3.5.9"
+  }
+]
